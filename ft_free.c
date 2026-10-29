@@ -1,6 +1,7 @@
 #include "ft_malloc.h"
 
-/* int	main(void) */
-/* { */
-/* 	return (0); */
-/* } */
+void	ft_free(void* ptr)
+{
+	ptr = ptr;
+}
+
