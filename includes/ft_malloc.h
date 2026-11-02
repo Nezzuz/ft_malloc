@@ -7,7 +7,7 @@
 #include <sys/time.h> //Contains getrlimit
 		      
 /* static struct	s_metadata */
-extern struct	s_metadata
+typedef struct	s_metadata
 {
 	void*		payload;
 	size_t		payload_size;
