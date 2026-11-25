@@ -9,10 +9,10 @@ endif
 confirm:
 	@echo "$(HOSTTYPE)"
 
-SRCS =  ft_malloc.c \
-        ft_free.c \
-        ft_realloc.c \
-        main.c
+SRCS =  src/ft_malloc.c \
+        src/ft_free.c \
+        src/ft_realloc.c \
+        src/main.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -22,6 +22,8 @@ CFLAGS  = -Wall -Wextra -Werror
 
 NAME = libft_malloc.so
 SONAME = libft_malloc_$(HOSTTYPE).so
+
+.DEFAULT_GOAL := all
 
 all: $(NAME)
 
@@ -45,4 +47,3 @@ fclean: clean
 	@$(RM) $(SONAME) $(NAME)
 
 re: fclean $(NAME)
-
