@@ -1,10 +1,14 @@
 .PHONY: build clean fclean re
+.DEFAULT_GLOBAL : build
 
 build:
 	@echo "Creating all libraries"
-	@cd Libft && make re && cp libft.a .. 
-	@cd ft_printf42 && make re && cp libftprintf.a ..
-	@cd GNL_42 && make re && cp libget_next_line.a ..
+	@$(MAKE) -C Libft 
+	@cp Libft/libft.a .
+	@$(MAKE) -C ft_printf42
+	@cp ft_printf42/libftprintf.a .
+	@$(MAKE) -C GNL_42
+	@cp GNL_42/libget_next_line.a .
 
 clean:
 	@echo "Cleaning..."

@@ -1,10 +1,13 @@
 #ifndef FT_MALLOC
-#define FT_MALLOC
-#include <unistd.h> //Also includes getpigesize
-#include <stdlib.h>
-#include <stdio.h>
-#include <sys/mman.h> //For mmap and munmap
-#include <sys/time.h> //Contains getrlimit
+# define FT_MALLOC
+# include <unistd.h> //Also includes getpigesize
+# include <stdlib.h>
+# include <stdio.h>
+# include <sys/mman.h> //For mmap and munmap
+# include <sys/time.h> //Contains getrlimit
+# include "../vendor/ft_printf42/ft_printf.h"
+# include "../vendor/Libft/libft.h"
+# include "../vendor/GNL_42/get_next_line.h"
 		      
 /* static struct	s_metadata */
 typedef struct	s_metadata
